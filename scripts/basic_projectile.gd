@@ -19,6 +19,6 @@ func on_timer_timeot():
 
 
 func _on_body_entered(body: Node):
-	# Por ahora al chocar desaparece xd
-#	queue_free()
-	pass
+	if body.has_method("take_damage"):
+		body.take_damage()
+		queue_free()
