@@ -8,6 +8,34 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://scripts/basic_enemy.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "HalfPlayer",
+"language": "GDScript",
+"path": "res://scripts/half_player.gd"
+}, {
+"base": "HalfPlayer",
+"class": "IcePoctoc",
+"language": "GDScript",
+"path": "res://scripts/ice_player.gd"
+}, {
+"base": "Area2D",
+"class": "projectile",
+"language": "GDScript",
+"path": "res://scripts/basic_projectile.gd"
+} ]
+_global_script_class_icons={
+"Enemy": "",
+"HalfPlayer": "",
+"IcePoctoc": "",
+"projectile": ""
+}
+
 [application]
 
 config/name="Power of Friendship"
@@ -86,6 +114,11 @@ arrow_left={
 arrow_right={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777233,"unicode":0,"echo":false,"script":null)
+ ]
+}
+dettach={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777238,"unicode":0,"echo":false,"script":null)
  ]
 }
 

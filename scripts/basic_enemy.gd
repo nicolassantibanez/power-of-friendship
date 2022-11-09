@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name Enemy
+
 func _physics_process(delta):
 	var Player1 = get_parent().get_node("Player1")
 	var Player2 = get_parent().get_node("Player2")
@@ -11,5 +13,11 @@ func _physics_process(delta):
 		position += (Player2.position - position) / 150
 		look_at(Player2.position)
 
-func take_damage():
+func _take_damage():
 	print("Enemy: Auch!")
+
+func _get_stun():
+	print("I'm stunned!")
+
+func _get_burn():
+	print("I'm being burned!")
